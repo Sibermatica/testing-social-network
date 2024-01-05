@@ -1,18 +1,13 @@
 import bcrypt from 'bcrypt';
 
+import { SALT } from '../config.js';
+
 export default function (data: string): Promise<string> {
     return new Promise((resolve, reject) => {
         bcrypt
-            .genSalt(10)
-            .then((salt) => {
-                bcrypt
-                    .hash(data, salt)
-                    .then((hash) => {
-                        resolve(hash);
-                    })
-                    .catch((err) => {
-                        reject(err);
-                    });
+            .hash(data, SALT)
+            .then((hash) => {
+                resolve(hash);
             })
             .catch((err) => {
                 reject(err);
