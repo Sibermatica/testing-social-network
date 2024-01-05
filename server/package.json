@@ -1,0 +1,16 @@
+{
+  "name": "social-network-server",
+  "version": "1.0.0",
+  "description": "Backend service",
+  "main": "build/index.js",
+  "scripts": {
+      "start": "node build/index.js",
+      "build": "tsc",
+      "build:dev": "tsc -w"
+  },
+  "author": "Jesús Blanco",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
