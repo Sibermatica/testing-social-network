@@ -4,6 +4,8 @@ const app = express();
 import './config.js'; // load environment
 import './database.js'; // load the database
 
+import router from './routes/index.routes.js';
+
 // settings
 app.set('port', process.env.PORT || 3000);
 
@@ -15,9 +17,7 @@ app.use((req, _, next) => {
 });
 
 // routes
-app.get('/', (_, res) => {
-    res.json({message: "Testing"});
-});
+app.use(router);
 
 // listen
 app.listen(app.get('port'), () => {
