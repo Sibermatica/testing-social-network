@@ -1,6 +1,9 @@
 import express from 'express';
 const app = express();
 
+import './config.js'; // load environment
+import './database.js'; // load the database
+
 // settings
 app.set('port', process.env.PORT || 3000);
 
