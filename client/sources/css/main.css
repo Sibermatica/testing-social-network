@@ -35,6 +35,10 @@ header {
 
 main {
   /* Basic styles */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   position: relative;
   top: 8rem;
 
@@ -45,4 +49,29 @@ main {
   border-radius: 5px;
   width: 90%;
   height: 90vh;
+
+  align-items: center;
+}
+
+main section.post {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+  align-items: center;
+
+  min-width: 500px;
+  min-height: 500px;
+
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+main section.post * {
+  margin: 2px;
+}
+
+main section.post img.thumbnail {
+  margin: 9px;
+  border-radius: 3px;
 }
