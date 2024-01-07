@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8" />
@@ -21,8 +21,8 @@
 
 	<main>
 
-		<!-- This gonna be a post -->
-		<section class="post">
+		<!-- Test post -->
+		<section class="test post">
 
 			<!-- Thumbnail (Miniatura) -->
 			<img src="sources/img/test_thumbnail.jpg" alt="This thumbnail doesnt exists" class="thumbnail"
@@ -38,11 +38,19 @@
 	</main>
 
 	<!-- Create Post Button -->
-	<a id="create-post" href="#crpost" class="ctpost-container">
+	<a id="create-post" href="javascript:Post.create(null)" class="ctpost-container">
 		<img src="sources/img/icon/feather.svg" class="icon" width="32" height="32" />
-		<p>Create Post</p>
+		<p>Crear Post</p>
 	</a>
 
 </body>
+
+<script>
+	const ERROR = -1;
+</script>
+
+<script src="sources/js/integration.js"></script>
+<script src="sources/js/post.js"></script>
+<script src="sources/js/accounts.js"></script>
 
 </html>
